@@ -34,11 +34,12 @@ PwnedHub is a vulnerable application designed exclusively for the [PWAPT](http:/
 6. Modify the hosts file to create the following records:
 
     ```
-    127.0.0.1   pwnedhub.com
+    127.0.0.1   www.pwnedhub.com
+    127.0.0.1   test.pwnedhub.com
     127.0.0.1   api.pwnedhub.com
     ```
 
-7. Visit the application at http://pwnedhub.com.
+7. Visit the applications at http://www.pwnedhub.com and http://test.pwnedhub.com.
 
 8. When done using PwnedHub, clean up the Docker environment with the following command:
 
@@ -87,7 +88,8 @@ PwnedHub is a vulnerable application designed exclusively for the [PWAPT](http:/
 7. Modify the hosts file to create the following records:
 
     ```
-    127.0.0.1   pwnedhub.com
+    127.0.0.1   www.pwnedhub.com
+    127.0.0.1   test.pwnedhub.com
     127.0.0.1   api.pwnedhub.com
     ```
 
@@ -97,16 +99,22 @@ PwnedHub is a vulnerable application designed exclusively for the [PWAPT](http:/
     $ sudo systemctl start mysql
     ```
 
-9. Start the PwnedHub application.
+9. Start the PwnedHub legacy application.
 
     ```
     $ python ./pwnedhub.py
     ```
 
-10. Start the PwnedAPI application.
+10. Start the PwnedHub 2.0 application.
+
+    ```
+    $ python ./pwnedspa.py
+    ```
+
+11. Start the PwnedHub API.
 
     ```
     $ python ./pwnedapi.py
     ```
 
-11. Visit the application at http://pwnedhub.com:5000.
+12. Visit the applications at http://www.pwnedhub.com:5000 and http://test.pwnedhub.com:5001.
